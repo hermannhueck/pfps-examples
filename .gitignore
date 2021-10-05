@@ -24,7 +24,10 @@ tests.iml
 docs/src/main/tut/contributing.md
 .ignore
 result*
-project/metals.sbt
+project/**/metals.sbt
 .bloop/
 .metals/
 project/.bloop/
+.vscode/
+.bsp/
+.sbthistory
