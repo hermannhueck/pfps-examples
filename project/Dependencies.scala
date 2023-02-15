@@ -6,6 +6,7 @@ object Dependencies {
     val cats       = "2.6.1"
     val catsEffect = "3.2.9"
     val catsMtl    = "1.2.1"
+    val circe      = "0.14.2"
     val derevo     = "0.12.6"
     val fs2        = "3.2.2"
     val monocle    = "3.1.0"
@@ -20,12 +21,16 @@ object Dependencies {
   }
 
   object Libraries {
-    def derevo(artifact: String): ModuleID = "tf.tofu" %% s"derevo-$artifact" % V.derevo
+    def derevo(artifact: String): ModuleID = "tf.tofu"  %% s"derevo-$artifact" % V.derevo
+    def circe(artifact: String): ModuleID  = "io.circe" %% s"circe-$artifact"  % V.circe
 
     val cats       = "org.typelevel" %% "cats-core"   % V.cats
     val catsEffect = "org.typelevel" %% "cats-effect" % V.catsEffect
     val catsMtl    = "org.typelevel" %% "cats-mtl"    % V.catsMtl
     val fs2        = "co.fs2"        %% "fs2-core"    % V.fs2
+
+    val circeCore   = circe("core")
+    val circeParser = circe("parser")
 
     val derevoCats          = derevo("cats")
     val derevoCirceMagnolia = derevo("circe-magnolia")

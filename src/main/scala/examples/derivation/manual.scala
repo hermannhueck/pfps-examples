@@ -1,6 +1,6 @@
 package examples.derivation
 
-import cats._
+import cats.{ Eq, Order, Show }
 import cats.syntax.all._
 import io.estatico.newtype.macros.newtype
 
@@ -42,5 +42,5 @@ object ManualDerivation extends App {
   println(p1 === p2)
   println(p1 < p2)
   println(p1.show)
-
+  println(p2.show)
 }

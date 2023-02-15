@@ -23,6 +23,8 @@ lazy val root = (project in file("."))
       Libraries.cats,
       Libraries.catsEffect,
       Libraries.catsMtl,
+      Libraries.circeCore,
+      Libraries.circeParser,
       Libraries.derevoCats,
       Libraries.derevoCirceMagnolia,
       Libraries.derevoTagless,
