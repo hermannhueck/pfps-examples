@@ -1,6 +1,6 @@
 import Dependencies._
 
-ThisBuild / scalaVersion := "2.13.10"
+ThisBuild / scalaVersion := "2.13.11"
 ThisBuild / version := "0.1.0-SNAPSHOT"
 ThisBuild / organization := "dev.profunktor"
 ThisBuild / organizationName := "ProfunKtor"
@@ -21,20 +21,20 @@ lazy val root = (project in file("."))
     libraryDependencies ++= Seq(
       CompilerPlugins.betterMonadicFor,
       CompilerPlugins.kindProjector,
-      // CompilerPlugins.semanticDB,
-      Libraries.cats,
-      Libraries.catsEffect,
+      CompilerPlugins.semanticDB,
+      // Libraries.cats,
+      // Libraries.catsEffect,
       Libraries.catsMtl,
-      Libraries.circeCore,
+      // Libraries.circeCore,
       Libraries.circeParser,
       Libraries.derevoCats,
       Libraries.derevoCirceMagnolia,
       Libraries.derevoTagless,
       Libraries.fs2,
-      Libraries.monocleCore,
+      // Libraries.monocleCore,
       Libraries.monocleMacro,
       Libraries.newtype,
-      Libraries.refinedCore,
+      // Libraries.refinedCore,
       Libraries.refinedCats,
       Libraries.tofu
     )
