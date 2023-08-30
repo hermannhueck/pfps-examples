@@ -8,7 +8,7 @@ object Dependencies {
     val catsMtl = "1.3.1"
     val circe   = "0.14.2"
     val derevo  = "0.13.0"
-    val fs2     = "3.8.0"
+    val fs2     = "3.9.1"
     val monocle = "3.2.0"
     val newtype = "0.4.4"
     val refined = "0.11.0"
@@ -17,7 +17,7 @@ object Dependencies {
     val betterMonadicFor = "0.3.1"
     val kindProjector    = "0.13.2"
     val organizeImports  = "0.6.0"
-    val semanticDB       = "4.8.7"
+    val semanticDB       = "4.8.10"
   }
 
   object Libraries {
