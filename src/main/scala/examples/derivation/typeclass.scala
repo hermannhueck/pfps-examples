@@ -9,6 +9,7 @@ import derevo.cats._
 import derevo.derive
 import derevo.tagless.{ applyK, flatMap }
 
+@annotation.nowarn("msg=unused value")
 object typeclass {
 
   // --- Concrete type `*`

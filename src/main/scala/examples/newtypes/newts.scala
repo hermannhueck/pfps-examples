@@ -57,6 +57,7 @@ object newts {
   //val bar = foo.copy(value = "") // copy does not exist
 }
 
+@annotation.nowarn("msg=unused value")
 object refinement {
   type Username = String Refined Contains['g']
 

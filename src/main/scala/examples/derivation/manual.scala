@@ -4,6 +4,7 @@ import cats.{ Eq, Order, Show }
 import cats.syntax.all._
 import io.estatico.newtype.macros.newtype
 
+@annotation.nowarn("msg=unused value")
 object ManualDerivation extends App {
 
   case class Person(age: Person.Age, name: Person.Name)

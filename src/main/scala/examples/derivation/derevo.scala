@@ -6,6 +6,7 @@ import io.estatico.newtype.macros.newtype
 import derevo.cats._
 import derevo.derive
 
+@annotation.nowarn("msg=unused value")
 object DerevoDerivation extends App {
 
   @derive(eqv, order, show)

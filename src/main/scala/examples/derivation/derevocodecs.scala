@@ -7,6 +7,7 @@ import derevo.cats._
 import derevo.derive
 import derevo.circe.magnolia.{ decoder, encoder }
 
+@annotation.nowarn("msg=unused value")
 object DerevoCodecDerivation extends App {
 
   @derive(decoder, encoder, eqv, order, show)
