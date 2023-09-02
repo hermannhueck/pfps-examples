@@ -25,6 +25,12 @@ object valueclasses {
     if (value.contains("@")) Email(value).some
     else none[Email]
 
+  def mkUsername2(value: String): Option[Username] =
+    value.nonEmpty.guard[Option].as(Username(value))
+
+  def mkEmail2(value: String): Option[Email] =
+    value.contains("@").guard[Option].as(Email(value))
+
   val foo =
     (
       mkUsername("aeinstein"),
@@ -34,7 +40,10 @@ object valueclasses {
     }
 
   val bar =
-    (mkUsername("aeinstein"), mkEmail("aeinstein@research.com")).mapN { case (username, email) =>
+    (
+      mkUsername("aeinstein"),
+      mkEmail("aeinstein@research.com")
+    ).mapN { case (username, email) =>
       lookup(username.copy(value = ""), email)
     }
 }

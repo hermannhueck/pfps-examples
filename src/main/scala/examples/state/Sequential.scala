@@ -25,7 +25,13 @@ object Sequential extends IOApp.Simple {
       n3 <- ioNextInt
     } yield n1 + n2 + n3
 
-  def run: IO[Unit] =
-    ioa.run(1).flatMap(IO.println).start.void
-
+  import scala.concurrent.duration._
+  def run: IO[Unit] = for {
+    _ <- IO.println("----------")
+    _ <- IO.println(seq.run(1).value)
+    _ <- IO.println("----------")
+    _ <- ioa.run(1).flatMap(IO.println).start.void
+    _ <- IO.sleep(1.second)
+    _ <- IO.println("----------")
+  } yield ()
 }

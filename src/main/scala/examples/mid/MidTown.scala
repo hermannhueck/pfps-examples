@@ -67,7 +67,7 @@ object UserStore {
 
   private final class UserLogger[F[_]: FlatMap](L: Logger[F]) extends UserStore[Mid[F, *]] {
     def register(username: String): Mid[F, Int] = fa =>
-      L.info(s"Calling UserStore with username: $username") *> fa.flatTap { len =>
+      L.info(s"Calling UserStore with username: $username") >> fa.flatTap { len => // changed *> to >>
         L.info(s"UserStore returned $len")
       }
   }
