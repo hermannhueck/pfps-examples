@@ -8,7 +8,7 @@ object Dependencies {
     val catsMtl = "1.3.1"
     val circe   = "0.14.2"
     val derevo  = "0.13.0"
-    val fs2     = "3.9.1"
+    val fs2     = "3.9.2"
     val monocle = "3.2.0"
     val newtype = "0.4.4"
     val refined = "0.11.0"
